@@ -9,7 +9,7 @@ use FindBin;
 sub dotfile {
     my $relative_path = $_[0];
 
-    return "${FindBin::Bin}/${relative_path}";
+    return "${ENV{HOME}}/.dotfiles/${relative_path}";
 }
 
 1;
