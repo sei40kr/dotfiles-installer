@@ -20,6 +20,15 @@ if (&is_macos) {
     brew_install('skhd');
     ln( dotfile('chunkwm/skhdrc'), "${ENV{HOME}}/.skhdrc" );
     brew_services_start('skhd');
+
+    # install ubersicht and the widgets
+    brew_cask_install('ubersicht');
+    ln( dotfile('ubersicht/widgets/bar-on-top.widget'),
+"${ENV{HOME}}/Library/Application Support/Übersicht/widgets/bar-on-top.widget"
+    );
+    ln( dotfile('ubersicht/widgets/bar-on-bottom.widget'),
+"${ENV{HOME}}/Library/Application Support/Übersicht/widgets/bar-on-bottom.widget"
+    );
 }
 
 1;
