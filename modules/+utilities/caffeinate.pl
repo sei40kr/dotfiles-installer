@@ -4,6 +4,9 @@
 use utf8;
 use strict;
 use warnings;
+use FindBin;
+use lib "${FindBin::Bin}/lib";
+use Install::PathResolver;
 
 if (&is_macos) {
     ln(
