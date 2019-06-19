@@ -85,11 +85,8 @@ pip2_install('ansible-lint');
 if (&is_macos) {
     brew_install('cquery');
     brew_install('clang-format');
-    brew_install('gdb');
 }
 elsif (&is_arch) {
-
-    # TODO install gdb
     pacman_sync('llvm');
     pacman_sync('llvm-libs');
     pacman_sync('clang');
@@ -97,7 +94,6 @@ elsif (&is_arch) {
 }
 pip3_install('cmakelint');
 pip3_install('cpplint');
-pip3_install('gdb-tools');
 
 # Docker
 yarn_global_add('dockerfile-language-server-nodejs');

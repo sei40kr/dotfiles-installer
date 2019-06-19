@@ -7,6 +7,7 @@ use warnings;
 
 if (&is_macos) {
     brew_install('gdb');
+    pip3_install('gdb-tools');
     curl(
 'https://raw.githubusercontent.com/cyrus-and/gdb-dashboard/master/.gdbinit',
         "${ENV{HOME}}/.gdbinit"
