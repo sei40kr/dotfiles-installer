@@ -184,15 +184,6 @@ cpanm('File::Zglob');
 cpanm('Perl::Critic');
 cpanm('Perl::Tidy');
 
-# PlantUML
-if (&is_macos) {
-    brew_cask_install('java');
-    brew_install('plantuml');
-}
-elsif (&is_arch) {
-    trizen_sync('plantuml');
-}
-
 # Python
 pip3_install('autopep8');
 pip3_install('flake8');
