@@ -163,15 +163,6 @@ elsif (&is_macos) {
     );
 }
 
-# LaTeX
-if (&is_macos) {
-    brew_install('ghostscript');
-    brew_cask_install('basictex');
-}
-else {
-    # TODO Install LaTeX compiler on other environments
-}
-
 # Markdown
 gem_install('mdl');
 yarn_global_add('markdownlint-cli');
