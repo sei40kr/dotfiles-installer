@@ -33,12 +33,6 @@ if (&is_macos) {
     brew_cask_install('gitter');
     brew_cask_install('plex-media-server');
 }
-elsif (&is_arch) {
-    pacman_sync('fd');
-    pacman_sync('jq');
-
-    trizen_sync('bfs');
-}
 
 gem_install('reveal-ck');
 

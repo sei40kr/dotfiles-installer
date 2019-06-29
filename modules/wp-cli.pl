@@ -10,6 +10,4 @@ if (&is_macos) {
     brew_install('wp-cli-completion');
 }
 
-# TODO install wp-cli on other envs
-
 1;

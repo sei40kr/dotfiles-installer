@@ -16,8 +16,5 @@ if (&is_macos) {
 
     ln( dotfile('global/globalrc'), "${ENV{HOME}}/.globalrc" );
 }
-else {
-    # TODO Install global on other envs
-}
 
 1;

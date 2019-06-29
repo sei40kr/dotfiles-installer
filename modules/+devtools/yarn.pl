@@ -7,8 +7,6 @@ use warnings;
 
 if (&is_macos) {
     brew_install( 'yarn', 'without-node' );
-} elsif (&is_arch) {
-    # TODO Install Yarn for Arch Linux
 }
 
 1;

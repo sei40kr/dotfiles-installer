@@ -8,11 +8,5 @@ use warnings;
 if (&is_macos) {
     brew_cask_install('docker');
 }
-elsif (&is_arch) {
-    pacman_sync('docker');
-    pacman_sync('docker-compose');
-
-    systemctl_enable('docker.service');
-}
 
 1;

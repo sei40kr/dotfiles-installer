@@ -10,8 +10,5 @@ if (&is_macos) {
 
     brew_cask_install('google-hangouts');
 }
-elsif (&is_arch) {
-    trizen_sync('google-chrome');
-}
 
 1;

@@ -9,10 +9,6 @@ if (&is_macos) {
     brew_install('giflossy');
     brew_install('imagemagick');
 }
-elsif (&is_arch) {
-    pacman_sync('gifsicle');
-    pacman_sync('imagemagick');
-}
 
 pip3_install('asciinema');
 

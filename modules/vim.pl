@@ -10,12 +10,7 @@ use Install::PathResolver;
 
 if (&is_macos) {
     brew_install('vim');
-}
-elsif (&is_arch) {
-    pacman_sync('vim');
-}
 
-if ( &is_macos || &is_arch ) {
     ln( dotfile('vim/vimrc'), "${ENV{HOME}}/.vimrc" );
 }
 

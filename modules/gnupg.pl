@@ -14,8 +14,6 @@ if (&is_macos) {
 
     ln( dotfile('gnupg/gpg-agent.conf'),
         "${ENV{HOME}}/.gnupg/gpg-agent.conf" );
-} else {
-    # TODO Install GnuPG on other envs
 }
 
 1;

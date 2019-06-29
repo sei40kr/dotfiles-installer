@@ -11,18 +11,13 @@ use Install::PathResolver;
 if (&is_macos) {
     brew_install('tmux');
     brew_install('reattach-to-user-namespace');
-}
-elsif (&is_arch) {
-    pacman_sync('tmux');
-}
 
-if ( &is_macos || &is_arch ) {
+    ln( dotfile('tmux/tmux.conf'), "${ENV{HOME}}/.tmux.conf" );
+
     git_clone(
         'https://github.com/tmux-plugins/tpm.git',
         "${ENV{HOME}}/.tmux/plugins/tpm"
     );
-
-    ln( dotfile('tmux/tmux.conf'), "${ENV{HOME}}/.tmux.conf" );
 
     # Install terminfo files
     tic( dotfile('terminfo/all-in-one.ti') );

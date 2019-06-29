@@ -13,17 +13,14 @@ if (&is_macos) {
         'https://github.com/BurntSushi/ripgrep.git' );
     brew_install('ripgrep-bin');
 
+    ln( dotfile('ripgrep/ripgreprc'), "${ENV{HOME}}/.ripgreprc" );
+
     ln(
-dotfile("${ENV{BREW_PREFIX}}/opt/ripgrep-bin/share/fish/vendor_completions.d/rg.fish"),
+        dotfile(
+"${ENV{BREW_PREFIX}}/opt/ripgrep-bin/share/fish/vendor_completions.d/rg.fish"
+        ),
         "${ENV{XDG_CONFIG_HOME}}/fish/completions/rg.fish"
     );
-}
-elsif (&is_arch) {
-    pacman_sync('ripgrep');
-}
-
-if ( &is_macos || &is_arch ) {
-    ln( dotfile('ripgrep/ripgreprc'), "${ENV{HOME}}/.ripgreprc" );
 }
 
 1;

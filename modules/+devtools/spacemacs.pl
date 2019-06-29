@@ -17,9 +17,6 @@ if (&is_macos) {
 
     tic( dotfile('terminfo/eterm-color.ti') );
 }
-elsif (&is_arch) {
-    pacman_sync('emacs');
-}
 
 git_clone( 'ssh://git@github.com/sei40kr/spacemacs.git',
     "${ENV{HOME}}/.emacs.d", 'develop' );
@@ -86,12 +83,6 @@ if (&is_macos) {
     brew_install('cquery');
     brew_install('clang-format');
 }
-elsif (&is_arch) {
-    pacman_sync('llvm');
-    pacman_sync('llvm-libs');
-    pacman_sync('clang');
-    trizen_sync('cquery');
-}
 pip3_install('cmakelint');
 pip3_install('cpplint');
 
@@ -101,10 +92,6 @@ yarn_global_add('dockerfile-language-server-nodejs');
 # ESS
 if (&is_macos) {
     brew_install( 'r', 'with-openblas' );
-}
-elsif (&is_arch) {
-    pacman_sync('openblas');
-    pacman_sync('r');
 }
 
 # Go
@@ -226,11 +213,6 @@ yarn_global_add('tslint');
 yarn_global_add('typescript');
 yarn_global_add('typescript-formatter');
 yarn_global_add('typescript-language-server');
-
-# Xclipboard
-if (&is_arch) {
-    pacman_sync('xsel');
-}
 
 # YAML
 pip3_install('yamllint');

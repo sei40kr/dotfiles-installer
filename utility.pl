@@ -45,10 +45,6 @@ sub is_linux {
     return $^O eq 'linux';
 }
 
-sub is_arch {
-    return ( -f '/etc/arch-release' );
-}
-
 sub log_wait {
     my $msg = $_[0];
 

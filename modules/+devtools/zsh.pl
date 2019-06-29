@@ -11,42 +11,6 @@ use Install::PathResolver;
 if (&is_macos) {
     brew_install('zsh');
 
-    brew_install('direnv');
-    brew_install('fzf');
-    brew_install('terminal-notifier');
-
-    brew_install('bat');
-    brew_install('diff-so-fancy');
-    brew_install('exa');
-    brew_install('htop');
-    brew_install('ncdu');
-    brew_install('prettyping');
-    brew_install('tree');
-}
-elsif (&is_arch) {
-    pacman_sync('zsh');
-    pacman_sync('subversion');    # required by zplugin
-
-    pacman_sync('fzf');
-
-    pacman_sync('bat');
-    pacman_sync('diff-so-fancy');
-    pacman_sync('htop');
-    pacman_sync('ncdu');
-    pacman_sync('prettyping');
-    pacman_sync('tree');
-
-    trizen_sync('exa');
-
-    # install direnv
-    pacman_sync('make');
-    trizen_sync('direnv');
-}
-
-if ( &is_macos || &is_arch ) {
-    git_clone( 'https://github.com/zdharma/zplugin.git',
-        "${ENV{HOME}}/.zplugin/bin" );
-
     ln( dotfile('zsh/zshenv'),        "${ENV{HOME}}/.zshenv" );
     ln( dotfile('zsh/zshenv'),        "${ENV{HOME}}/.zsh/.zshenv" );
     ln( dotfile('zsh/zprofile'),      "${ENV{HOME}}/.zsh/.zprofile" );
@@ -58,16 +22,6 @@ if ( &is_macos || &is_arch ) {
     );
     ln( dotfile('zsh/alias_defs.zsh'), "${ENV{HOME}}/.zsh/alias_defs.zsh" );
 
-    # Install my plugins
-    git_clone(
-        'https://github.com/sei40kr/zsh-better-run-help.git',
-        "${ENV{HOME}}/.zplugin/plugins/_local---zsh-better-run-help"
-    );
-    git_clone(
-        'https://github.com/sei40kr/zsh-fast-alias-tips.git',
-        "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fast-alias-tips"
-    );
-
     # Install completions
     my @zsh_completions = qw(_atcoder-tools _kubectl _rustup);
     ln( dotfile("zsh/completions/${_}"), "${ENV{HOME}}/.zsh/completions/${_}" )
@@ -78,6 +32,31 @@ if ( &is_macos || &is_arch ) {
       qw(clone_gh create_gh dcin dii dirm dni drm drmf dst dstp dvi dxb fzf-remote-widget fzf-project-widget kca kres magit pyclean ranger-cd);
     ln( dotfile("zsh/functions/${_}"), "${ENV{HOME}}/.zsh/functions/${_}" )
       foreach @zsh_funcs;
+
+    brew_install('direnv');
+    brew_install('fzf');
+    brew_install('terminal-notifier');
+
+    brew_install('bat');
+    brew_install('diff-so-fancy');
+    brew_install('exa');
+    brew_install('htop');
+    brew_install('ncdu');
+    brew_install('prettyping');
+    brew_install('tree');
+
+    # Install zplugin and my plugins
+    git_clone( 'https://github.com/zdharma/zplugin.git',
+        "${ENV{HOME}}/.zplugin/bin" );
+
+    git_clone(
+        'https://github.com/sei40kr/zsh-better-run-help.git',
+        "${ENV{HOME}}/.zplugin/plugins/_local---zsh-better-run-help"
+    );
+    git_clone(
+        'https://github.com/sei40kr/zsh-fast-alias-tips.git',
+        "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fast-alias-tips"
+    );
 }
 
 1;
