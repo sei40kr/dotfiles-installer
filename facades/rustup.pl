@@ -28,9 +28,8 @@ sub rustup_component_add {
 }
 
 my sub find_rustup_exec {
-    foreach my $dirpath ("${ENV{HOME}}/.cargo/bin") {
-        return "${dirpath}/rustup" if ( -x "${dirpath}/rustup" );
-    }
+    return "${ENV{HOME}}/.cargo/bin/rustup"
+      if ( -x "${ENV{HOME}}/.cargo/bin/rustup" );
 }
 
 my sub rustup_toolchain_install_reducer {
