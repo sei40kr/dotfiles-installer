@@ -35,7 +35,7 @@ if (&is_macos) {
 
     brew_install('direnv');
     brew_install('fzf');
-    brew_install('terminal-notifier');
+    gem_install('terminal-notifier');
 
     brew_install('bat');
     brew_install('diff-so-fancy');
