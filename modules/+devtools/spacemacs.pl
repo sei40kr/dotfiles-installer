@@ -194,6 +194,7 @@ gem_install('rake');
 gem_install('rcodetools');
 gem_install('rubocop');
 gem_install('seeing_is_believing');
+gem_install('solargraph');
 
 # Rust
 cargo_nightly_install('racer');
