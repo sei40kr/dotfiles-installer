@@ -12,7 +12,7 @@ if (&is_macos) {
     brew_tap('koekeishiya/formulae');
 
     # install chunkwm
-    brew_install('chunkwm');
+    brew_install( 'chunkwm', 'with-purify', 'without-ffm' );
     ln( dotfile('chunkwm/chunkwmrc'), "${ENV{HOME}}/.chunkwmrc" );
     brew_services_start('chunkwm');
 
