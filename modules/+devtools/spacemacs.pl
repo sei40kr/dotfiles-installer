@@ -171,6 +171,7 @@ cpanm('Perl::Tidy');
 pip3_install('autopep8');
 pip3_install('flake8');
 pip3_install('importmagic');
+pip3_install('epc'); # importmagic dep
 pip3_install('jedi');
 pip3_install('pydoc_utils');
 pip3_install('pyflakes');
