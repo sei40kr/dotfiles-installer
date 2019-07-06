@@ -11,6 +11,9 @@ use Install::PathResolver;
 if (&is_macos) {
     brew_cask_install('alacritty');
 
+    # Install Menlo for Powerline
+    brew_cask_install('font-menlo-for-powerline');
+
     ln( dotfile('alacritty/alacritty.yml'),
         "${ENV{XDG_CONFIG_HOME}}/alacritty/alacritty.yml" );
 

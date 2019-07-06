@@ -12,8 +12,8 @@ if (&is_macos) {
     brew_tap('railwaycat/emacsmacport');
     brew_cask_install('emacs-mac-spacemacs-icon');
 
-    # Install the font
-    brew_cask_install('font-firacode-nerd-font-mono');
+    # Install Menlo for Powerline
+    brew_cask_install('font-menlo-for-powerline');
 
     tic( dotfile('terminfo/eterm-color.ti') );
 }
