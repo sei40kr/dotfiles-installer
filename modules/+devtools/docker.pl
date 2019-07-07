@@ -12,6 +12,10 @@ if (&is_macos) {
     brew_tap('goodwithtech/dockle');
     brew_install('dockle');
 
+    # Install Trivy
+    brew_tap('knqyf263/trivy');
+    brew_install('trivy');
+
     # Install lazydocker
     brew_tap('jesseduffield/lazydocker');
     brew_install('lazydocker');
