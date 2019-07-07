@@ -33,10 +33,6 @@ if (&is_macos) {
     ln( dotfile("zsh/functions/${_}"), "${ENV{HOME}}/.zsh/functions/${_}" )
       foreach @zsh_funcs;
 
-    brew_install('direnv');
-    brew_install('fzf');
-    gem_install('terminal-notifier');
-
     brew_install('bat');
     brew_install('diff-so-fancy');
     brew_install('exa');
