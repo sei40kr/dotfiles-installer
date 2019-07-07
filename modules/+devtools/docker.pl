@@ -7,6 +7,10 @@ use warnings;
 
 if (&is_macos) {
     brew_cask_install('docker');
+
+    # Install lazydocker
+    brew_tap('jesseduffield/lazydocker');
+    brew_install('lazydocker');
 }
 
 1;
