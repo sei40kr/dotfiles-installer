@@ -46,10 +46,6 @@ if (&is_macos) {
         "${ENV{HOME}}/.zplugin/bin" );
 
     git_clone(
-        'https://github.com/sei40kr/zsh-better-run-help.git',
-        "${ENV{HOME}}/.zplugin/plugins/_local---zsh-better-run-help"
-    );
-    git_clone(
         'https://github.com/sei40kr/zsh-fast-alias-tips.git',
         "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fast-alias-tips"
     );
