@@ -29,7 +29,7 @@ if (&is_macos) {
 
     # Install functions
     my @zsh_funcs =
-      qw(clone_gh create_gh dcin dii dirm dni drm drmf dst dstp dvi dxb fzf-remote-widget fzf-project-widget kca kres magit pyclean ranger-cd);
+      qw(clone_gh create_gh fzf-remote-widget fzf-project-widget kca kres magit pyclean ranger-cd);
     ln( dotfile("zsh/functions/${_}"), "${ENV{HOME}}/.zsh/functions/${_}" )
       foreach @zsh_funcs;
 
