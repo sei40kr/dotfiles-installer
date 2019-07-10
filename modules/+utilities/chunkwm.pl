@@ -11,22 +11,24 @@ use Install::PathResolver;
 if (&is_macos) {
     brew_tap('koekeishiya/formulae');
 
-    # install chunkwm
+    # Install chunkwm
     brew_install( 'chunkwm', 'with-purify', 'without-ffm' );
     ln( dotfile('chunkwm/chunkwmrc'), "${ENV{HOME}}/.chunkwmrc" );
     brew_services_start('chunkwm');
 
-    # install skhd
+    # Install skhd
     brew_install('skhd');
+    ln( dotfile('chunkwm/skhdrc'), "${ENV{HOME}}/.skhdrc" );
+    brew_services_start('skhd');
+    # Install utility scripts
     ln(
         dotfile('chunkwm/toggle-chunkwm-layout'),
         "${ENV{HOME}}/.local/bin/toggle-chunkwm-layout"
     );
-    ln( dotfile('chunkwm/skhdrc'), "${ENV{HOME}}/.skhdrc" );
-    brew_services_start('skhd');
 
-    # install ubersicht and the widgets
+    # Install Ubersicht
     brew_cask_install('ubersicht');
+    # Install bar-on-bottom widget
     ln( dotfile('ubersicht/widgets/bar-on-bottom.widget'),
 "${ENV{HOME}}/Library/Application Support/Übersicht/widgets/bar-on-bottom.widget"
     );
