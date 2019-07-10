@@ -50,6 +50,10 @@ if (&is_macos) {
         "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fzf-docker"
     );
     git_clone(
+        'https://github.com/sei40kr/zsh-fzf-gcloud.git',
+        "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fzf-gcloud"
+    );
+    git_clone(
         'https://github.com/sei40kr/zsh-fzf-kubernetes.git',
         "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fzf-kubernetes"
     );
