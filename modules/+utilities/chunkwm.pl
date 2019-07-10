@@ -18,6 +18,10 @@ if (&is_macos) {
 
     # install skhd
     brew_install('skhd');
+    ln(
+        dotfile('chunkwm/toggle-chunkwm-layout'),
+        "${ENV{HOME}}/.local/bin/toggle-chunkwm-layout"
+    );
     ln( dotfile('chunkwm/skhdrc'), "${ENV{HOME}}/.skhdrc" );
     brew_services_start('skhd');
 
