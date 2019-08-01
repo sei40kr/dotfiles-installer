@@ -18,6 +18,8 @@ if (&is_macos) {
     tic( dotfile('terminfo/eterm-color.ti') );
 }
 
+ln( dotfile('emacs/bin/emacs-wrapper'), "${ENV{HOME}}/.local/bin/emacs-wrapper" );
+
 git_clone( 'ssh://git@github.com/sei40kr/spacemacs.git',
     "${ENV{HOME}}/.emacs.d", 'develop' );
 
@@ -67,7 +69,7 @@ ln(
 );
 
 git_clone( 'ssh://git@github.com/sei40kr/spacemacs.d.git',
-           "${ENV{HOME}}/.spacemacs.d" );
+    "${ENV{HOME}}/.spacemacs.d" );
 
 if (&is_macos) {
 
@@ -171,7 +173,7 @@ cpanm('Perl::Tidy');
 pip3_install('autopep8');
 pip3_install('flake8');
 pip3_install('importmagic');
-pip3_install('epc'); # importmagic dep
+pip3_install('epc');    # importmagic dep
 pip3_install('jedi');
 pip3_install('ptsvd');
 pip3_install('pydoc_utils');
