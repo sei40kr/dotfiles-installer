@@ -26,16 +26,15 @@ if (&is_macos) {
 
     # install ubersicht widgets
     brew_cask_install('font-fontawesome');
-    my @widgets = qw( top-bar-bg
-                      yabai-spaces
-                      yabai-active-window );
-    ln( dotfile('ubersicht/widgets/${_}.widget'),
+    my @widgets =
+      qw( top-bar-bg yabai-spaces yabai-active-window bottom-bar-bg );
+    ln( dotfile("ubersicht/widgets/${_}.widget"),
 "${ENV{HOME}}/Library/Application Support/Übersicht/widgets/${_}.widget"
     ) foreach @widgets;
 
     # tweak menu bar and dock to hide
     defaults_write_bool( 'Apple Global Domain', '_HIHideMenuBar', 1 );
-    defaults_write_bool( 'com.apple.dock', 'autohide', 1 );
+    defaults_write_bool( 'com.apple.dock',      'autohide',       1 );
     defaults_write_float( 'com.apple.dock', 'autohide-delay', 0.0 );
 }
 
