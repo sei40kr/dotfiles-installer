@@ -9,8 +9,8 @@ use lib "${FindBin::Bin}/lib";
 use Install::PathResolver;
 
 if (&is_macos) {
-    brew_tap('d12frosted/emacs-plus');
-    brew_install( 'emacs-plus', 'with-no-frame-refocus' );
+    brew_tap('railwaycat/emacsmacport');
+    brew_cask_install('emacs-mac-spacemacs-icon');
 
     # Install Menlo for Powerline
     brew_cask_install('font-menlo-for-powerline');
