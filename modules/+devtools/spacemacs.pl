@@ -18,7 +18,11 @@ if (&is_macos) {
     tic( dotfile('terminfo/eterm-color.ti') );
 }
 
-ln( dotfile('emacs/bin/emacs-wrapper'), "${ENV{HOME}}/.local/bin/emacs-wrapper" );
+ln( dotfile('emacs/bin/edebug'), "${ENV{HOME}}/.local/bin/edebug" );
+ln(
+    dotfile('emacs/bin/emacs-wrapper'),
+    "${ENV{HOME}}/.local/bin/emacs-wrapper"
+);
 
 git_clone( 'ssh://git@github.com/sei40kr/spacemacs.git',
     "${ENV{HOME}}/.emacs.d", 'develop' );
