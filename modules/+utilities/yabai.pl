@@ -27,7 +27,7 @@ if (&is_macos) {
     # install ubersicht widgets
     brew_cask_install('font-fontawesome');
     my @widgets =
-      qw( top-bar-bg yabai-spaces yabai-active-window clock bottom-bar-bg );
+      qw( top-bar-bg yabai-spaces yabai-active-window clock bottom-bar-bg cpu-ram-usage );
     ln( dotfile("ubersicht/widgets/${_}.widget"),
 "${ENV{HOME}}/Library/Application Support/Übersicht/widgets/${_}.widget"
     ) foreach @widgets;
