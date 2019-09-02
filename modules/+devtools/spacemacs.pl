@@ -230,4 +230,7 @@ yarn_global_add('typescript-language-server');
 # YAML
 pip3_install('yamllint');
 
+# Others
+brew_install('trash');    # for osx-trash
+
 1;
