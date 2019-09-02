@@ -114,6 +114,10 @@ go_get('golang.org/x/tools/cmd/godoc');
 go_get('golang.org/x/tools/cmd/goimports');
 go_get('golang.org/x/tools/cmd/gorename');
 go_get('golang.org/x/tools/cmd/guru');
+# Go Flycheck checkers
+go_get('github.com/kisielk/errcheck');      # go-errcheck
+go_get('golang.org/x/lint/golint');         # go-golint
+go_get('github.com/mdempsky/unconvert');    # go-unconvert
 
 # Haskell
 stack_install('apply-refact');
