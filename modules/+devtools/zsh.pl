@@ -61,6 +61,9 @@ if (&is_macos) {
         'https://github.com/sei40kr/zsh-fast-alias-tips.git',
         "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fast-alias-tips"
     );
+
+    # Install starship config
+    ln( dotfile('zsh/starship.toml'), "${ENV{XDG_CONFIG_HOME}}/starship.toml" );
 }
 
 1;
