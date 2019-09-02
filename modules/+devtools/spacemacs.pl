@@ -178,20 +178,16 @@ cpanm('Perl::Critic');
 cpanm('Perl::Tidy');
 
 # Python
-pip3_install('autopep8');
 pip3_install('flake8');
 pip3_install('importmagic');
 pip3_install('epc');    # importmagic dep
 pip3_install('jedi');
 pip3_install('ptsvd');
 pip3_install('pydoc_utils');
-pip3_install('pyflakes');
 pip3_install('pylint');
 pip3_install('pyls-isort');
 pip3_install('pyls-mypy');
-pip3_install('python-language-server');
-pip3_install('rope');
-pip3_install('yapf');
+pip3_install('python-language-server[all]');
 
 # Ruby
 gem_install('clippy');
