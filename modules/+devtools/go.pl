@@ -11,6 +11,9 @@ git_clone( 'https://github.com/syndbg/goenv.git', "${ENV{HOME}}/.goenv" );
 goenv_install('1.11.1');
 goenv_global('1.11.1');
 
+# Install gox, Go cross compile tool
+go_get('github.com/mitchellh/gox');
+
 # install goexec
 go_get('github.com/shurcooL/goexec');
 
