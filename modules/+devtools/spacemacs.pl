@@ -238,6 +238,9 @@ yarn_global_add('typescript-language-server');
 pip3_install('yamllint');
 
 # Others
-brew_install('trash');    # for osx-trash
+if (&is_macos) {
+    brew_install('exiftran');    # for helm-files
+    brew_install('trash');       # for osx-trash
+}
 
 1;
