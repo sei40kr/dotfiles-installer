@@ -1,4 +1,4 @@
-# cargo.pl --- Cargo facade
+# Cargo.pm --- Cargo facade
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;

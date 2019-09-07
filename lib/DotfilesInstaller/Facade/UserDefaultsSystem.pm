@@ -1,4 +1,4 @@
-# defaults.pl --- defaults facade
+# UserDefaultsSystem.pm --- Mac OS X user defaults system facade
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;

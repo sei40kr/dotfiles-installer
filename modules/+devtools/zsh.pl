@@ -7,6 +7,8 @@ use warnings;
 use FindBin;
 use lib "${FindBin::Bin}/lib";
 use Install::PathResolver;
+use DotfilesInstaller::Facade::Git;
+use DotfilesInstaller::Facade::Homebrew;
 
 if (&is_macos) {
     brew_install('zsh');

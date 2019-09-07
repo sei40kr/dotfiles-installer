@@ -4,6 +4,7 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Homebrew;
 
 if (&is_macos) {
     brew_install( 'yarn', 'without-node' );

@@ -1,4 +1,4 @@
-# nvm.pl --- Node Version Manager facade
+# Nvm.pm --- Node Version Manager facade
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;

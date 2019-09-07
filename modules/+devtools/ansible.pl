@@ -4,6 +4,7 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Pip3;
 
 pip3_install('ansible');
 

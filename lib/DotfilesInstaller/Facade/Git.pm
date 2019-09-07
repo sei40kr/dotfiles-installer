@@ -1,4 +1,4 @@
-# 20_git.pl --- Git facade
+# Git.pm --- Git facade
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;

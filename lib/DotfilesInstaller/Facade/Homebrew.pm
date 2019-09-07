@@ -1,4 +1,4 @@
-# 10_brew.pl --- brew facade
+# Homebrew.pm --- Homebrew facade
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;

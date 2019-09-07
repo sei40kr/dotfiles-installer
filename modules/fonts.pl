@@ -4,6 +4,7 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Homebrew;
 
 # 11 Best Programming Fonts - ITNEXT
 # https://itnext.io/11-best-programming-fonts-724283a9ed57

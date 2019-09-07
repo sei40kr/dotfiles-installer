@@ -4,6 +4,8 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Git;
+use DotfilesInstaller::Facade::Nvm;
 
 # install nvm
 git_clone( 'https://github.com/creationix/nvm.git', "${ENV{HOME}}/.nvm" );

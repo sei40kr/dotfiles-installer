@@ -1,4 +1,4 @@
-# 50_yarn.pl --- yarn facade
+# Yarn.pm --- Yarn facade
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;

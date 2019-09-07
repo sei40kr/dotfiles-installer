@@ -4,6 +4,9 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Git;
+use DotfilesInstaller::Facade::Pip3;
+use DotfilesInstaller::Facade::Pyenv;
 
 # install pyenv
 git_clone( 'https://github.com/pyenv/pyenv.git', "${ENV{HOME}}/.pyenv" );

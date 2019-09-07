@@ -7,6 +7,8 @@ use warnings;
 use FindBin;
 use lib "${FindBin::Bin}/lib";
 use Install::PathResolver;
+use DotfilesInstaller::Facade::Homebrew;
+use DotfilesInstaller::Facade::UserDefaultsSystem;
 
 if (&is_macos) {
     brew_cask_install('alacritty');

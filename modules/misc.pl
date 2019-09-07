@@ -4,6 +4,10 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Homebrew;
+use DotfilesInstaller::Facade::Pip3;
+use DotfilesInstaller::Facade::RubyGems;
+use DotfilesInstaller::Facade::Yarn;
 
 if (&is_macos) {
     brew_install('coreutils');

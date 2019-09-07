@@ -4,6 +4,7 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Homebrew;
 
 # TODO Install scala
 

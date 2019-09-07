@@ -1,4 +1,4 @@
-# 50_stack.pl --- Stack facade
+# HaskellToolStack.pm --- Haskell Tool Stack facade
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;
@@ -28,7 +28,7 @@ my sub stack_install_reducer {
 
     log_wait('Installing Stack packages ...');
 
-    error('stack not found.') unless ( is_exec('stack') );
+    error('stack not found.') unless is_exec('stack');
 
     my @stack_pkgs         = ();
     my @stack_install_opts = ();

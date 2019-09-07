@@ -4,6 +4,7 @@ use warnings;
 use FindBin;
 use lib "${FindBin::Bin}/lib";
 use Install::PathResolver;
+use DotfilesInstaller::Facade::Homebrew;
 
 # ripgrep.pl --- ripgrep installer
 # author: Seong Yong-ju <sei40kr@gmail.com>

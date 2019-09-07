@@ -7,6 +7,7 @@ use warnings;
 use FindBin;
 use lib "${FindBin::Bin}/lib";
 use Install::PathResolver;
+use DotfilesInstaller::Facade::Pip3;
 
 pip3_install('ranger-fm');
 

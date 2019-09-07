@@ -7,6 +7,17 @@ use warnings;
 use FindBin;
 use lib "${FindBin::Bin}/lib";
 use Install::PathResolver;
+use DotfilesInstaller::Facade::Cargo;
+use DotfilesInstaller::Facade::Git;
+use DotfilesInstaller::Facade::Go;
+use DotfilesInstaller::Facade::HaskellToolStack;
+use DotfilesInstaller::Facade::Homebrew;
+use DotfilesInstaller::Facade::Pip2;
+use DotfilesInstaller::Facade::Pip3;
+use DotfilesInstaller::Facade::RubyGems;
+use DotfilesInstaller::Facade::Rustup;
+use DotfilesInstaller::Facade::UserDefaultsSystem;
+use DotfilesInstaller::Facade::Yarn;
 
 if (&is_macos) {
     brew_tap('railwaycat/emacsmacport');

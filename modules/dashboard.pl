@@ -4,6 +4,7 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::UserDefaultsSystem;
 
 if (&is_macos) {
 

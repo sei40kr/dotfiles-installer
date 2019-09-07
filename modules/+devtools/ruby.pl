@@ -4,6 +4,8 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Git;
+use DotfilesInstaller::Facade::Rbenv;
 
 # install rbenv
 git_clone( 'https://github.com/rbenv/rbenv.git', "${ENV{HOME}}/.rbenv" );

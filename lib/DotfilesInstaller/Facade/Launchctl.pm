@@ -1,4 +1,4 @@
-# launchctl.pl --- launchctl facade
+# Launchctl.pm --- Interfaces with launchd
 # author: Seong Yong-ju <sei40kr@gmail.com>
 
 use utf8;

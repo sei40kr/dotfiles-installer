@@ -4,6 +4,9 @@
 use utf8;
 use strict;
 use warnings;
+use DotfilesInstaller::Facade::Git;
+use DotfilesInstaller::Facade::Go;
+use DotfilesInstaller::Facade::Goenv;
 
 # install goenv
 git_clone( 'https://github.com/syndbg/goenv.git', "${ENV{HOME}}/.goenv" );

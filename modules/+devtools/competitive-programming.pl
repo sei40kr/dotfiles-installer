@@ -7,6 +7,12 @@ use warnings;
 use FindBin;
 use lib "${FindBin::Bin}/lib";
 use Install::PathResolver;
+use DotfilesInstaller::Facade::Goenv;
+use DotfilesInstaller::Facade::Nvm;
+use DotfilesInstaller::Facade::Pip3;
+use DotfilesInstaller::Facade::Pyenv;
+use DotfilesInstaller::Facade::Rbenv;
+use DotfilesInstaller::Facade::Rustup;
 
 
 # install AtCoder specific versions of environments
