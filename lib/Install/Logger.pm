@@ -6,10 +6,24 @@ use strict;
 use warnings;
 use Term::ANSIColor;
 
+sub error {
+    my ( $msg, $errcode ) = @_;
+    $errcode = 1 unless ( defined($errcode) );
+
+    printf "%s %s\n", colored( 'ERROR:', 'red' ), $msg;
+    exit $errcode;
+}
+
 sub log_warn {
     my $message = $_[0];
 
     printf "%s %s\n", colored( 'WARN:', 'yellow' ), $message;
+}
+
+sub log_wait {
+    my $msg = $_[0];
+
+    printf "%s %s\n", colored( '==>', 'blue' ), colored( $msg, 'bold' );
 }
 
 sub log_trace {

@@ -45,20 +45,6 @@ sub is_linux {
     return $^O eq 'linux';
 }
 
-sub log_wait {
-    my $msg = $_[0];
-
-    printf "%s %s\n", colored( '==>', 'blue' ), colored( $msg, 'bold' );
-}
-
-sub error {
-    my ( $msg, $errcode ) = @_;
-    $errcode = 1 unless ( defined($errcode) );
-
-    printf "%s %s\n", colored( 'ERROR:', 'red' ), $msg;
-    exit $errcode;
-}
-
 sub run_reducers {
     my @ordered_reducers = map {
         $_ ->{reducer}
