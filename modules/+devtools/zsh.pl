@@ -30,8 +30,7 @@ if (&is_macos) {
       foreach @zsh_completions;
 
     # Install functions
-    my @zsh_funcs =
-      qw(clone_gh create_gh fzf-project-widget kca kres pyclean ranger-cd);
+    my @zsh_funcs = qw(clone_gh create_gh kca kres pyclean ranger-cd);
     ln( dotfile("zsh/functions/${_}"), "${ENV{HOME}}/.zsh/functions/${_}" )
       foreach @zsh_funcs;
 
@@ -58,6 +57,10 @@ if (&is_macos) {
     git_clone(
         'https://github.com/sei40kr/zsh-fzf-kubernetes.git',
         "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fzf-kubernetes"
+    );
+    git_clone(
+        'https://github.com/sei40kr/zsh-fzf-project.git',
+        "${ENV{HOME}}/.zplugin/plugins/_local---zsh-fzf-project"
     );
     git_clone(
         'https://github.com/sei40kr/zsh-fast-alias-tips.git',
