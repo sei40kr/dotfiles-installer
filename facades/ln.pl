@@ -8,7 +8,7 @@ use File::Basename qw(dirname);
 use File::Path qw(mkpath);
 use FindBin;
 use lib "${FindBin::Bin}/lib";
-use Install::CommandRunner;
+use DotfilesInstaller::Command::CommandRunner;
 use Install::Logger;
 
 my @ln_intermediate = ();
