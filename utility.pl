@@ -9,7 +9,7 @@ use File::Path qw(mkpath rmtree);
 use FindBin;
 use Term::ANSIColor;
 use lib "${FindBin::Bin}/lib";
-use Install::CommandRunner;
+use DotfilesInstaller::Command::CommandRunner;
 
 my %options = (
     dry_run => 0,

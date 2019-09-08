@@ -7,7 +7,7 @@ use warnings;
 use File::Basename qw(dirname);
 use FindBin;
 use lib "${FindBin::Bin}/lib";
-use Install::CommandRunner;
+use DotfilesInstaller::Command::CommandRunner;
 use Install::Logger;
 
 my @sudo_launchctl_load_intermediate = ();
